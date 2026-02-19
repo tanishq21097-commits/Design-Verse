@@ -1,28 +1,549 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design_Verse</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>DesignVerse Landing Page V2</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#193ce6",
+            "background-light": "#f6f6f8",
+            "background-dark": "#111421",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
 </head>
 
-<body>
-    <div class="navbar">
-        <div class="navdiv">
-            <div class="logo">
-                <a href="#">DesignVerse</a>
-            </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About Us</a></li>
-                <button><a href="#">Login</a></button>
-                <button><a href="#">Sign Up</a></button>
-            </ul>
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary/20 selection:text-primary">
+  <!-- Top Navigation -->
+  <header
+    class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2">
+        <div class="flex size-8 items-center justify-center rounded-lg bg-primary text-white">
+          <span class="material-symbols-outlined text-xl">design_services</span>
         </div>
+        <span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">DesignVerse</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors dark:text-slate-300 dark:hover:text-white"
+          href="#">Find Talent</a>
+        <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors dark:text-slate-300 dark:hover:text-white"
+          href="#">Find Work</a>
+        <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors dark:text-slate-300 dark:hover:text-white"
+          href="#">Why DesignVerse</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button
+          class="hidden text-sm font-semibold text-slate-900 hover:text-primary dark:text-white dark:hover:text-primary sm:block">Log
+          In</button>
+        <button
+          class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white transition-all hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+          Sign Up
+        </button>
+      </div>
     </div>
+  </header>
+  <main>
+    <!-- Split Screen Hero Section -->
+    <section class="relative overflow-hidden pt-12 lg:pt-20 pb-16 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <!-- Left Content -->
+          <div class="flex flex-col gap-8 max-w-2xl">
+            <div
+              class="inline-flex items-center gap-2 w-fit rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+              <span class="flex size-2 rounded-full bg-primary"></span>
+              New Features V2.0
+            </div>
+            <h1
+              class="text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-6xl lg:text-7xl leading-[1.1]">
+              Curated Design Talent for <span class="text-primary">World-Class</span> Brands
+            </h1>
+            <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-300 max-w-lg">
+              Connect with the top 1% of creative professionals. Elevate your brand with experts in branding, UI/UX, and
+              motion design who understand the nuance of luxury.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+              <button
+                class="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-white shadow-lg shadow-primary/25 transition-all hover:translate-y-[-2px] hover:shadow-xl hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                Hire Designers
+              </button>
+              <button
+                class="inline-flex h-12 items-center justify-center rounded-lg border border-slate-200 bg-white px-8 text-base font-bold text-slate-900 transition-all hover:border-primary/50 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-200 focus:ring-offset-2 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
+                Apply as Designer
+              </button>
+            </div>
+            <div class="flex items-center gap-4 pt-4 text-sm text-slate-500 dark:text-slate-400">
+              <div class="flex -space-x-2">
+                <img alt="Designer Portrait"
+                  class="inline-block size-8 rounded-full ring-2 ring-white dark:ring-background-dark object-cover"
+                  data-alt="Portrait of a young female designer"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGZ6hD26q69marWIJdJZGN3Z_0mcTvOwUZyF_JyaiTR-ScrMAafCE9K_BNxhMAm2tZuFwakZARKa_WlNSoRZGVO-7xWdMAk-f_tBsSvDzG-Qf8BganvstxtVtyW8vZJaqENKbzijKmzv-0Scp7TXjpaJDycmjGE6fFEtAVXEa0gl5P4YV2dNR3ODUdwaBDRPrh9sp4_es4KvVykNaWfBlIgx0kxwU00XOURr2TioyKyvTwx960FfBVJvl3c4zMy02PqVTL8ZzxsLw" />
+                <img alt="Designer Portrait"
+                  class="inline-block size-8 rounded-full ring-2 ring-white dark:ring-background-dark object-cover"
+                  data-alt="Portrait of a male designer looking confident"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuChXJhTzkhlQVxCVCOhyBRxFMoUndJkRrhy-lVHgoH-fX7IkagD_NclJSC39RoGcnmYsaNJ9FHTQC0Mn9RVO5aYWwX98foBJ6TBwYvwH0Q3lcKPkhSGsNll-bMed__n-H61-56QPX8g-ivH4CVtNy14zR_p4Ech7L4CCRQSFsPRv5PcdoKJK2_y67qgRMraLNFx7IvhHFATOvvFeDar_ibRPGmIc-EspkhEt90xrwZ1Dr2pRkdobkwuQ9QaVHlx7NP5iJfQij89HAE" />
+                <img alt="Designer Portrait"
+                  class="inline-block size-8 rounded-full ring-2 ring-white dark:ring-background-dark object-cover"
+                  data-alt="Portrait of a smiling creative professional"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMxyKfETKDoslCo112I9ayxz_-YnhV-LNZFBKNq-qbw0CXS-ce_-0xzXXJ5l9x9YeKNxftzs19E4Mv84pEcM5HBcpMgDhMV3CtaviFD240BJZTfb2E59jUMa9-AYG84eWlJTQsTZtd9lfR9sbgyBa_U228jnlTEYHfsRC-I_rQHuj5OcKGu6NYX7pXsl5T_OSc2BDfKhl32QwGcNd0t9OZimCLMxCkjYHSROnMEL0nZ9HcKbmSVQPk-CMMd1W-kg7xW11-nVA6ZDQ" />
+                <div
+                  class="flex size-8 items-center justify-center rounded-full bg-slate-100 ring-2 ring-white dark:bg-slate-800 dark:ring-background-dark">
+                  <span class="text-xs font-bold">+2k</span>
+                </div>
+              </div>
+              <p>Trusted by 2,000+ top creatives</p>
+            </div>
+          </div>
+          <!-- Right Visual -->
+          <div class="relative w-full h-full min-h-[500px] flex items-center justify-center lg:justify-end">
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-gradient-to-tr from-primary/20 via-primary/5 to-transparent rounded-full blur-3xl -z-10">
+            </div>
+            <div
+              class="relative w-full aspect-square max-w-lg rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 border border-white/20 backdrop-blur-sm bg-white/5 group">
+              <img alt="Abstract 3D Design Element"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                data-alt="Abstract flowing 3D shapes in blue and white on a clean background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVsGOYJOhQZsJGR1Eq51gcD1rF6wOAqd0zxflxPPg9RlOenXgTpSxZ4UepGbqyjpwr3YyVbWLjpyXeXOJVkVKS6Nj3ReVfWzRa2ChwpNppPUIZRWgyumyj4i3tZPpsfukrHG-n0Y-K3p3p7i3R9dbLnbTBqEp6dDiPagYRp08Z4b0ZrdYiQyXPnbfPi0kXnzn0Rnu5DPDAjAKZxl5uv5YbuoF2twyJayEWC5WReXoEEoVMyxTBqwtj1a9SNdwmALfPLUoQScJ7z_I" />
+              <!-- Floating Elements for depth -->
+              <div
+                class="absolute -bottom-6 -left-6 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 animate-bounce"
+                style="animation-duration: 3s;">
+                <div class="flex items-center gap-3">
+                  <div class="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg text-green-600 dark:text-green-400">
+                    <span class="material-symbols-outlined">verified</span>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Project Status</p>
+                    <p class="text-sm font-bold text-slate-900 dark:text-white">Completed</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute top-10 -right-4 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 animate-pulse"
+                style="animation-duration: 4s;">
+                <div class="flex items-center gap-3">
+                  <div class="flex -space-x-2">
+                    <div class="size-6 rounded-full bg-primary/20"></div>
+                    <div class="size-6 rounded-full bg-primary/40"></div>
+                    <div class="size-6 rounded-full bg-primary"></div>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold text-slate-900 dark:text-white">New Talent</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Trust Bar -->
+    <section class="border-y border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <p class="text-center text-sm font-semibold uppercase tracking-widest text-slate-400 mb-8">Trusted by
+          forward-thinking companies</p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+          <!-- Placeholder Logos using Text/Icons for cleaner code, simulating logos -->
+          <div class="flex items-center gap-2 text-xl font-bold text-slate-800 dark:text-white"><span
+              class="material-symbols-outlined">pentagon</span> ACME Corp</div>
+          <div class="flex items-center gap-2 text-xl font-bold text-slate-800 dark:text-white"><span
+              class="material-symbols-outlined">token</span> Vertex</div>
+          <div class="flex items-center gap-2 text-xl font-bold text-slate-800 dark:text-white"><span
+              class="material-symbols-outlined">change_history</span> Pyramid</div>
+          <div class="flex items-center gap-2 text-xl font-bold text-slate-800 dark:text-white"><span
+              class="material-symbols-outlined">all_inclusive</span> Infinite</div>
+          <div class="flex items-center gap-2 text-xl font-bold text-slate-800 dark:text-white"><span
+              class="material-symbols-outlined">waves</span> Flow</div>
+        </div>
+      </div>
+    </section>
+    <!-- Top Categories Section -->
+    <section class="py-24 bg-white dark:bg-background-dark">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div class="max-w-xl">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Explore Design
+              Specialties</h2>
+            <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Browse talent by category to find the perfect
+              match for your project needs.</p>
+          </div>
+          <a class="group flex items-center gap-2 text-primary font-bold hover:text-primary/80 transition-colors"
+            href="#">
+            View all categories
+            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <a class="group relative flex flex-col justify-between overflow-hidden rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-none hover:border-primary/30"
+            href="#">
+            <div
+              class="mb-6 flex size-12 items-center justify-center rounded-lg bg-white dark:bg-slate-800 shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined">brush</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Brand Identity</h3>
+              <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Logo design, style guides, and brand strategy.
+              </p>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-between border-t border-slate-200 dark:border-slate-700 pt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">1.2k Designers</span>
+              <span class="material-symbols-outlined text-sm text-primary">arrow_forward</span>
+            </div>
+          </a>
+          <!-- Card 2 -->
+          <a class="group relative flex flex-col justify-between overflow-hidden rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-none hover:border-primary/30"
+            href="#">
+            <div
+              class="mb-6 flex size-12 items-center justify-center rounded-lg bg-white dark:bg-slate-800 shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined">devices</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Web &amp; Mobile</h3>
+              <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">UI/UX design, prototyping, and user research.
+              </p>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-between border-t border-slate-200 dark:border-slate-700 pt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">2.8k Designers</span>
+              <span class="material-symbols-outlined text-sm text-primary">arrow_forward</span>
+            </div>
+          </a>
+          <!-- Card 3 -->
+          <a class="group relative flex flex-col justify-between overflow-hidden rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-none hover:border-primary/30"
+            href="#">
+            <div
+              class="mb-6 flex size-12 items-center justify-center rounded-lg bg-white dark:bg-slate-800 shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined">view_in_ar</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">3D &amp; Motion</h3>
+              <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Animation, 3D modeling, and VFX.</p>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-between border-t border-slate-200 dark:border-slate-700 pt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">850 Designers</span>
+              <span class="material-symbols-outlined text-sm text-primary">arrow_forward</span>
+            </div>
+          </a>
+          <!-- Card 4 -->
+          <a class="group relative flex flex-col justify-between overflow-hidden rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-none hover:border-primary/30"
+            href="#">
+            <div
+              class="mb-6 flex size-12 items-center justify-center rounded-lg bg-white dark:bg-slate-800 shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined">draw</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Illustration</h3>
+              <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Digital art, editorial illustration, and icons.
+              </p>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-between border-t border-slate-200 dark:border-slate-700 pt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">1.5k Designers</span>
+              <span class="material-symbols-outlined text-sm text-primary">arrow_forward</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Talent Grid -->
+    <section class="py-24 bg-background-light dark:bg-slate-900">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Meet the Creators
+          </h2>
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">Hand-picked professionals ready
+            to tackle your most ambitious projects.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Talent Card 1 -->
+          <div
+            class="group overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="relative h-64 overflow-hidden">
+              <img alt="Minimalist interior design project"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                data-alt="Minimalist living room with soft lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWTAWr0vZ0XZTuamWg69hJvmrlelp-ebP8AMVdB771P3RTg15iS7xdfHBFRp41DdxL6ZbRrYpV7JkLqfCpZLsxbhz6Ni9BcF-_EqPRkIHbGUuyOulKyPhud_25WtZml_S0ahttshk6UUGMvkbg93edUIUVgvyHmbUZ-asZ8M5ZEhC6dDSz2OT8y4ArSE8hSham9KYBXfptU6dOrlbQwHEcl7oQeSPo8DGLrxGoV1sSHMHefppUQmRG_u9OqpIubpJe2lNU1tttsnc" />
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm">Interior
+                  Design</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <img alt="Sarah J. profile"
+                  class="size-12 rounded-full object-cover border-2 border-white dark:border-slate-700 shadow-sm"
+                  data-alt="Portrait of Sarah J"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqeAzp9pxwuusc4vlm24lfx6zXaQVQY1Reej00tJ6pnFYdTvsiBd5LXiNWvuhJe_INEn0ZJFzltWqhHXhb9I1WW_Vr6ZKkHen1Hn574pmJjcMGBCv9ZJTw97jJvGgbftZHTjXCYvTiDyw9Yl8xGoPBxZRBNuFHfvXt30_CByfDNQ5JfBfCN9WPDh6yviCGDFB6cqw-HBhcVsGbDK7HLyAvs0w-Gela-jDJs94MFgPycFcflq-l2k2Y_afymc7IIePuXqFfHtT1YyM" />
+                <div>
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-white">Sarah Jenkins</h3>
+                  <div class="flex items-center text-xs text-slate-500 dark:text-slate-400">
+                    <span class="material-symbols-outlined text-[14px] text-yellow-500 mr-1">star</span>
+                    <span>4.9 (124 reviews)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 flex justify-between items-center">
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Starting at <span
+                    class="text-slate-900 dark:text-white font-bold">$85/hr</span></p>
+                <button class="text-primary font-bold text-sm hover:underline">View Portfolio</button>
+              </div>
+            </div>
+          </div>
+          <!-- Talent Card 2 -->
+          <div
+            class="group overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="relative h-64 overflow-hidden">
+              <img alt="Abstract digital artwork"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                data-alt="Vibrant abstract digital art composition"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6MgMgLQVTrRhEUVuGF_I64iV9dYHY_xfy6OAsrNB5gs7oH-L0cDcdaYimF8Fw63dtGilPtQzHyFXFXBZ9T0vuSHNOiMdBtP7saOcv7NmZIIzEA9jVD3LDqq33Ze7vVf_tFPNEX1E_zbyOVqVOmmrm1d6nXjwRBrUuIy_fg1MlPGWfVWEZyNDAga51QVAKVaEKwbvDV2-GcEzdq0doOWX90uzCSn75ytEii1nwYrtSbOSxH9Wp8DfRV-499eK0aowqCSl2D0q0y00" />
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm">Digital
+                  Art</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <img alt="Marcus R. profile"
+                  class="size-12 rounded-full object-cover border-2 border-white dark:border-slate-700 shadow-sm"
+                  data-alt="Portrait of Marcus R"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIFvJwikzqx-RybH2jMZlYPTx_dQLNY6t3X15oImOrNL-Qk1QBV8j1KTjA9-ni_3oFMClTHMKihpPtAcZO_4e8lsnumlvqunhMrH5Ili6pIw9xQRWeUKUKlkOmONzREW-BcZRSWr9zEjcZ6c1DACgCFpbtGqhRqI9LLMPhN-988nwv3oJ8lbLL2Ts3AWrw_XqhXQ9wRCSAYKatbBwd7h6JTjfpCzTD4vy6Ip1EHT98wjzcDQ3HtU_HX5kizwSUvMLx8Bw2fqP78js" />
+                <div>
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-white">Marcus Ray</h3>
+                  <div class="flex items-center text-xs text-slate-500 dark:text-slate-400">
+                    <span class="material-symbols-outlined text-[14px] text-yellow-500 mr-1">star</span>
+                    <span>5.0 (89 reviews)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 flex justify-between items-center">
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Starting at <span
+                    class="text-slate-900 dark:text-white font-bold">$120/hr</span></p>
+                <button class="text-primary font-bold text-sm hover:underline">View Portfolio</button>
+              </div>
+            </div>
+          </div>
+          <!-- Talent Card 3 -->
+          <div
+            class="group overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="relative h-64 overflow-hidden">
+              <img alt="Modern mobile app interface"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                data-alt="Clean mobile app interface design on a screen"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqtg5YgHJqs5JYmg5RjKoDovuHljdvxAvprkK7YZNNvGgJ4mHYA4nSVJttDjT1VH2NcA1nt4gpyfkut-z_JcEMvZ8owOEA1YI_hRyh5U_ISDGsWkLFyb5NMI2tpdR3gFhOlq2CtrU-7jZQruo04fxpos75vqMsJDL-zTEsD3lMuerkJvUz76K0s1Zk4EkoSgvnAI9iiRBqSueZXdYL6lMWRrJZ2bKZXmxEnToT3JpU3gVQtdMfF_K_B0hf81fPoKnHVMBx_XgTK2I" />
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <span
+                  class="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-900 backdrop-blur-sm">UI/UX</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <img alt="Elena K. profile"
+                  class="size-12 rounded-full object-cover border-2 border-white dark:border-slate-700 shadow-sm"
+                  data-alt="Portrait of Elena K"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYYs_gw1BtIH8UC942TXaK4ONl7b47Lz5RQb7yMmzUsmYyZlFgx_9GwlIqer3ljLS50emKieX8TCrp8GNFkdZi5mAmbOWgT-85LKY3WbpDUiutLxKKrk05cCVXgjnwiM0mNAoMCHxKQ30e1vkbWFqzcykDaRiu5_TooTFvBHl5pGj3tlJiN4oJGxmgpirLXLXJ-IXC5GH3UbG5vl8zLxSnrTEWM26MYI6yZ9l4JUtTVyK9KriBjywt698Qr9s_2enIj8ZQZLF5lYo" />
+                <div>
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-white">Elena Kovic</h3>
+                  <div class="flex items-center text-xs text-slate-500 dark:text-slate-400">
+                    <span class="material-symbols-outlined text-[14px] text-yellow-500 mr-1">star</span>
+                    <span>4.9 (210 reviews)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 flex justify-between items-center">
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Starting at <span
+                    class="text-slate-900 dark:text-white font-bold">$95/hr</span></p>
+                <button class="text-primary font-bold text-sm hover:underline">View Portfolio</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 text-center">
+          <button
+            class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50 hover:text-primary dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700">
+            View All Designers
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Social Proof Section -->
+    <section class="relative py-24 bg-slate-900 text-white overflow-hidden">
+      <!-- Background Decoration -->
+      <div class="absolute top-0 right-0 -mt-20 -mr-20 h-96 w-96 rounded-full bg-primary/20 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 -mb-20 -ml-20 h-96 w-96 rounded-full bg-indigo-500/20 blur-3xl"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Success Stories</span>
+            <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-8">
+              "DesignVerse transformed how we approach creative hiring. The quality is unmatched."
+            </h2>
+            <div class="flex items-center gap-4">
+              <img alt="Executive Portrait" class="size-14 rounded-full border-2 border-white/20 object-cover"
+                data-alt="Portrait of a male executive in a suit"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNBqrTGG38MYn8Y5O7OPrYZG9yKCO3PRw-4Ib7o3ca_90KzYn6h2gbK820KGUaqdfbTLCue2L9Zpt6R6HQ4E9mKpsD7_EfaHKUc4t2N-rqSLHts4J2IhECLbOwMgowOy_Q1Ufm3xuwUCR9hpZQJN9uwcKtmaf7Hmq_g7Hvdf6O7WAt0S7GmTzZiIwuRqZ0y-vFHRM1VCQCdyQ8co9H8CNAwk-XU6rcWwekyFRNyAzM2GzmqoeS4VP1-ZkYvLl-9nDy9SzHbjA-j6A" />
+              <div>
+                <p class="font-bold text-lg">James Wilson</p>
+                <p class="text-slate-400">Creative Director, TechFlow</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10">
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <p class="text-4xl font-extrabold text-white mb-1">98%</p>
+                <p class="text-slate-400 text-sm">Client Satisfaction Rate</p>
+              </div>
+              <div>
+                <p class="text-4xl font-extrabold text-white mb-1">24h</p>
+                <p class="text-slate-400 text-sm">Average Hire Time</p>
+              </div>
+              <div>
+                <p class="text-4xl font-extrabold text-white mb-1">15k+</p>
+                <p class="text-slate-400 text-sm">Completed Projects</p>
+              </div>
+              <div>
+                <p class="text-4xl font-extrabold text-white mb-1">$50M</p>
+                <p class="text-slate-400 text-sm">Creator Earnings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-24 bg-white dark:bg-background-dark">
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-6">Ready to start
+          your next project?</h2>
+        <p class="text-lg text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto">Join thousands of brands and
+          designers building the future of digital experiences together.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button
+            class="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+            Get Started Now
+          </button>
+          <button
+            class="inline-flex h-12 items-center justify-center rounded-lg bg-slate-100 px-8 text-base font-bold text-slate-900 transition-all hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-slate-200 focus:ring-offset-2 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-slate-50 pt-16 pb-12 border-t border-slate-200 dark:bg-slate-900 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div>
+          <div class="flex items-center gap-2 mb-6">
+            <div class="flex size-6 items-center justify-center rounded bg-primary text-white">
+              <span class="material-symbols-outlined text-sm">design_services</span>
+            </div>
+            <span class="text-base font-bold text-slate-900 dark:text-white">DesignVerse</span>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+            The premium marketplace for top-tier design talent. Connecting visionaries with creators since 2023.
+          </p>
+          <div class="flex gap-4">
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                class="sr-only">Twitter</span><svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24">
+                <path
+                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                </path>
+              </svg></a>
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                class="sr-only">GitHub</span><svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24">
+                <path clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  fill-rule="evenodd"></path>
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-6">For Clients</h4>
+          <ul class="space-y-4">
+            <li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                href="#">Find Talent</a></li>
+            <li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                href="#">Enterprise Solutions</a></li>
+            <li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                href="#">Project Management</a></li>
+            <li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                href="#">Success Stories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-6">For Talent</h4>
+          <ul class="space-y-4">
+            <li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                href="#">Find Work</a></li>
+            <li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                href="#">Create Portfolio</a></li>
+            <li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                href="#">Community</a></li>
+            <li><a class="text-sm text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-white"
+                href="#">Freelance Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-6">Subscribe</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Get the latest design trends and platform updates.
+          </p>
+          <form class="flex flex-col gap-2">
+            <input
+              class="rounded-lg border-slate-300 bg-white px-4 py-2 text-sm text-slate-900 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder-slate-500"
+              placeholder="Enter your email" type="email" />
+            <button
+              class="rounded-lg bg-slate-900 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
+              type="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-slate-500 dark:text-slate-400">© 2023 DesignVerse Inc. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a class="text-sm text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+            href="#">Privacy</a>
+          <a class="text-sm text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+            href="#">Terms</a>
+          <a class="text-sm text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+            href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
